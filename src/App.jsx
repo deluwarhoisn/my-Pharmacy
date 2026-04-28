@@ -76,7 +76,7 @@ function App() {
             </ul>
 
             <a className="call-btn" href="tel:01724608599" aria-label="Emergency helpline">
-              হেল্পলাইন: 01724608599 / 01923775964
+              হেল্পলাইন: 01724608599/01923775964
             </a>
           </div>
         </nav>
