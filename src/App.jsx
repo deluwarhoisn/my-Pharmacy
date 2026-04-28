@@ -1,16 +1,23 @@
 
-
 import './App.css'
 import { useState } from 'react'
+import { NavLink, Route, Routes } from 'react-router-dom'
+import HomePage from './pages/HomePage'
+import MedicinePage from './pages/MedicinePage'
+import LivestockPage from './pages/LivestockPage'
+import BreedingPage from './pages/BreedingPage'
+import DoctorRequestPage from './pages/DoctorRequestPage'
+import DashboardPage from './pages/DashboardPage'
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const closeMenu = () => setIsMenuOpen(false)
 
   return (
     <div className="page-shell">
       <header className="site-header">
         <nav className="navbar" aria-label="Primary navigation">
-          <a className="brand" href="#home" aria-label="Sotota Pharmacy home">
+          <NavLink className="brand" to="/" aria-label="Sotota Pharmacy home" onClick={closeMenu}>
             <span className="brand-mark" aria-hidden="true">
               <svg viewBox="0 0 64 64" role="img" focusable="false">
                 <circle cx="32" cy="32" r="30" fill="currentColor" opacity="0.12" />
@@ -25,7 +32,7 @@ function App() {
               <strong>Sotota Pharmacy</strong>
               <small>Trusted Vet + Human Care</small>
             </span>
-          </a>
+          </NavLink>
 
           <button
             type="button"
@@ -41,28 +48,31 @@ function App() {
 
           <div className={`nav-wrap ${isMenuOpen ? 'open' : ''}`}>
             <ul className="nav-list">
-              <li><a href="#home">হোম</a></li>
+              <li>
+                <NavLink to="/" onClick={closeMenu}>হোম</NavLink>
+              </li>
 
               <li className="has-dropdown">
-                <button type="button" className="drop-trigger">মেডিসিন কর্নার</button>
+                <NavLink className="drop-trigger" to="/medicine" onClick={closeMenu}>মেডিসিন কর্নার</NavLink>
                 <ul className="dropdown" aria-label="মেডিসিন কর্নার সেকশন">
-                  <li><a href="#general-meds">সাধারণ ঔষধ</a></li>
-                  <li><a href="#supplements">সাপ্লিমেন্ট</a></li>
-                  <li><a href="#first-aid">ফার্স্ট এইড</a></li>
+                  <li><NavLink to="/medicine" onClick={closeMenu}>সাধারণ ঔষধ</NavLink></li>
+                  <li><NavLink to="/medicine" onClick={closeMenu}>সাপ্লিমেন্ট</NavLink></li>
+                  <li><NavLink to="/medicine" onClick={closeMenu}>ফার্স্ট এইড</NavLink></li>
                 </ul>
               </li>
 
               <li className="has-dropdown">
-                <button type="button" className="drop-trigger">প্রাণিসম্পদ সেবা</button>
+                <NavLink className="drop-trigger" to="/livestock" onClick={closeMenu}>প্রাণিসম্পদ সেবা</NavLink>
                 <ul className="dropdown" aria-label="প্রাণিসম্পদ সেবা সেকশন">
-                  <li><a href="#cattle-goats">গরু ও ছাগল</a></li>
-                  <li><a href="#poultry">হাঁস-মুরগি</a></li>
-                  <li><a href="#vet-advice">ওষুধ ও পরামর্শ</a></li>
+                  <li><NavLink to="/livestock" onClick={closeMenu}>গরু ও ছাগল</NavLink></li>
+                  <li><NavLink to="/livestock" onClick={closeMenu}>হাঁস-মুরগি</NavLink></li>
+                  <li><NavLink to="/livestock" onClick={closeMenu}>ওষুধ ও পরামর্শ</NavLink></li>
                 </ul>
               </li>
 
-              <li><a href="#breeding">কৃত্রিম প্রজনন</a></li>
-              <li><a className="visit-btn" href="#home-visit">ডাক্তার ডাকুন</a></li>
+              <li><NavLink to="/breeding" onClick={closeMenu}>কৃত্রিম প্রজনন</NavLink></li>
+              <li><NavLink to="/dashboard" onClick={closeMenu}>ড্যাশবোর্ড</NavLink></li>
+              <li><NavLink className="visit-btn" to="/doctor-request" onClick={closeMenu}>ডাক্তার ডাকুন</NavLink></li>
             </ul>
 
             <a className="call-btn" href="tel:01724608599" aria-label="Emergency helpline">
@@ -72,28 +82,15 @@ function App() {
         </nav>
       </header>
 
-      <main className="hero-placeholder" id="home">
-        <h1>পরিবার, খামার ও পোষা প্রাণীর জন্য একসাথে বিশ্বস্ত সেবা</h1>
-      </main>
-
-      <section className="polli-page" id="polli-cikisok" aria-label="Polli Cikisok team">
-        <div className="polli-head">
-          <h2>আমাদের পল্লী চিকিৎসক টিম</h2>
-          <p>Sotota Pharmacy এর সাথে যুক্ত অভিজ্ঞ সেবাদাতা</p>
-        </div>
-
-        <div className="polli-grid">
-          <article className="polli-card">
-            <h3>Polli Cikisok Asikur Rohman Sofi</h3>
-            <p>গ্রাম পর্যায়ে প্রাণিসম্পদ ও সাধারণ চিকিৎসা পরামর্শ।</p>
-          </article>
-
-          <article className="polli-card">
-            <h3>Polli Cikisok Mojibur Rohman</h3>
-            <p>খামারভিত্তিক চিকিৎসা সহায়তা ও জরুরি সেবা সহযোগিতা।</p>
-          </article>
-        </div>
-      </section>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/medicine" element={<MedicinePage />} />
+        <Route path="/livestock" element={<LivestockPage />} />
+        <Route path="/breeding" element={<BreedingPage />} />
+        <Route path="/doctor-request" element={<DoctorRequestPage />} />
+        <Route path="/dashboard" element={<DashboardPage />} />
+        <Route path="*" element={<HomePage />} />
+      </Routes>
     </div>
   )
 }

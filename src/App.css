@@ -135,6 +135,11 @@
   outline: none;
 }
 
+.nav-list a.active {
+  color: var(--blue-900);
+  background: rgba(43, 108, 176, 0.14);
+}
+
 .has-dropdown .drop-trigger::after {
   content: '▾';
   margin-left: 8px;
@@ -274,6 +279,102 @@
   font-weight: 500;
 }
 
+.content-page {
+  width: min(1240px, 95vw);
+  margin: 10px auto 48px;
+  border-radius: 18px;
+  padding: 34px 22px;
+  background: rgba(255, 255, 255, 0.78);
+  border: 1px solid var(--line);
+  box-shadow: 0 14px 34px rgba(14, 79, 67, 0.08);
+}
+
+.content-page h1 {
+  margin: 0;
+  color: var(--green-900);
+  font-size: clamp(1.3rem, 2.2vw, 2rem);
+}
+
+.content-page > p {
+  margin: 10px 0 22px;
+  color: #33566a;
+  font-weight: 600;
+}
+
+.info-grid,
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.info-card,
+.stat-card {
+  background: linear-gradient(145deg, #f6fdfb, #f4f9ff);
+  border: 1px solid #d8e9e3;
+  border-radius: 14px;
+  padding: 18px;
+}
+
+.info-card h3,
+.stat-card h3 {
+  margin: 0 0 8px;
+  color: var(--blue-900);
+  font-size: 1rem;
+}
+
+.info-card p {
+  margin: 0;
+  color: #304652;
+  font-weight: 500;
+}
+
+.stats-grid {
+  margin-bottom: 14px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.stat-card strong {
+  display: block;
+  color: var(--green-900);
+  font-size: 1.8rem;
+}
+
+.request-form {
+  display: grid;
+  gap: 12px;
+  max-width: 720px;
+}
+
+.request-form label {
+  display: grid;
+  gap: 6px;
+  font-weight: 700;
+  color: var(--green-900);
+}
+
+.request-form input,
+.request-form textarea {
+  width: 100%;
+  border: 1px solid #cde0e8;
+  border-radius: 10px;
+  padding: 11px 12px;
+  font: inherit;
+  background: #fff;
+}
+
+.request-form button {
+  width: fit-content;
+  border: 0;
+  border-radius: 10px;
+  padding: 11px 18px;
+  color: var(--white);
+  background: linear-gradient(120deg, var(--green-700), var(--blue-700));
+  font-family: inherit;
+  font-weight: 800;
+  cursor: pointer;
+}
+
 @media (max-width: 1110px) {
   .navbar {
     grid-template-columns: auto auto;
@@ -351,6 +452,11 @@
   }
 
   .polli-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .info-grid,
+  .stats-grid {
     grid-template-columns: 1fr;
   }
 }
