@@ -5,6 +5,7 @@ import { NavLink, Route, Routes } from 'react-router-dom'
 import HomePage from './pages/HomePage'
 import MedicinePage from './pages/MedicinePage'
 import LivestockPage from './pages/LivestockPage'
+import LivestockAdvicePage from './pages/LivestockAdvicePage'
 import BreedingPage from './pages/BreedingPage'
 import DoctorRequestPage from './pages/DoctorRequestPage'
 import DashboardPage from './pages/DashboardPage'
@@ -66,7 +67,7 @@ function App() {
                 <ul className="dropdown" aria-label="প্রাণিসম্পদ সেবা সেকশন">
                   <li><NavLink to="/livestock" onClick={closeMenu}>গরু ও ছাগল</NavLink></li>
                   <li><NavLink to="/livestock" onClick={closeMenu}>হাঁস-মুরগি</NavLink></li>
-                  <li><NavLink to="/livestock" onClick={closeMenu}>ওষুধ ও পরামর্শ</NavLink></li>
+                  <li><NavLink to="/livestock-advice" onClick={closeMenu}>ওষুধ ও পরামর্শ</NavLink></li>
                 </ul>
               </li>
 
@@ -86,6 +87,7 @@ function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/medicine" element={<MedicinePage />} />
         <Route path="/livestock" element={<LivestockPage />} />
+        <Route path="/livestock-advice" element={<LivestockAdvicePage />} />
         <Route path="/breeding" element={<BreedingPage />} />
         <Route path="/doctor-request" element={<DoctorRequestPage />} />
         <Route path="/dashboard" element={<DashboardPage />} />
