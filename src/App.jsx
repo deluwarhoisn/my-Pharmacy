@@ -73,7 +73,7 @@ function App() {
 
               <li><NavLink to="/breeding" onClick={closeMenu}>কৃত্রিম প্রজনন</NavLink></li>
               <li><NavLink to="/dashboard" onClick={closeMenu}>ড্যাশবোর্ড</NavLink></li>
-              <li><NavLink className="visit-btn" to="/doctor-request" onClick={closeMenu}>ডাক্তার ডাকুন</NavLink></li>
+              <li><NavLink className="btn" to="/doctor-request" onClick={closeMenu}>ডাক্তার ডাকুন</NavLink></li>
             </ul>
 
             <a className="call-btn" href="tel:01724608599" aria-label="Emergency helpline">
