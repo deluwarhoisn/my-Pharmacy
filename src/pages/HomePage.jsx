@@ -1,3 +1,5 @@
+import Footer from './Footer'
+
 function HomePage() {
   return (
     <>
@@ -22,7 +24,7 @@ function HomePage() {
             <p>খামারভিত্তিক চিকিৎসা সহায়তা ও জরুরি সেবা সহযোগিতা।</p>
           </article>
         </div>
-        <footer></footer>
+        <Footer />
       </section>
     </>
   )
