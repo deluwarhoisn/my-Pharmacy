@@ -21,7 +21,7 @@ function DoctorRequestPage() {
           সমস্যার বিবরণ
           <textarea rows="4" placeholder="রোগ/সমস্যা সংক্ষেপে লিখুন" />
         </label>
-        <button type="submit">রিকোয়েস্ট পাঠান</button>
+        <button type="submit">রিকোয়েস্ট পাঠান.</button>
       </form>
     </section>
   )
