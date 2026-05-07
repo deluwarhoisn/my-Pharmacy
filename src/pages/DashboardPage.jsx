@@ -6,11 +6,11 @@ function DashboardPage() {
 
       <div className="stats-grid">
         <article className="stat-card">
-          <h3>আজকের কল</h3>
+          <h3>আজকের কল.</h3>
           <strong>42</strong>
         </article>
         <article className="stat-card">
-          <h3>হোম ভিজিট রিকোয়েস্ট</h3>
+          <h3>হোম ভিজিট রিকোয়েস্ট.</h3>
           <strong>17</strong>
         </article>
         <article className="stat-card">
