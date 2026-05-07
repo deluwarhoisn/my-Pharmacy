@@ -10,7 +10,7 @@ function DoctorRequestPage() {
           <input type="text" placeholder="নাম লিখুন" />
         </label>
         <label>
-          মোবাইল নম্বর
+          মোবাইল নাম্বার
           <input type="tel" placeholder="01XXXXXXXXX" />
         </label>
         <label>
