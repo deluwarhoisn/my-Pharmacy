@@ -30,7 +30,7 @@ function DashboardPage() {
         </article>
         <article className="info-card">
           <h3>Polli Cikisok Mojibur Rohman</h3>
-          <p>আজকের ভিজিট: 6</p>
+          <p>আজকের ভিজিট: 12</p>
         </article>
       </div>
     </section>
