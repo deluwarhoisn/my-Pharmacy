@@ -28,7 +28,7 @@ function DashboardPage(): JSX.Element {
       <div className="info-grid">
         <article className="info-card">
           <h3>Polli Cikisok Asikur Rohman Sofi</h3>
-          <p>আজকের ভিজিট: 10</p>
+          <p>আজকের ভিজিট: 12</p>
         </article>
         <article className="info-card">
           <h3>Polli Cikisok Mojibur Rohman</h3>
