@@ -26,7 +26,11 @@ function DashboardPage() {
       <div className="info-grid">
         <article className="info-card">
           <h3>Polli Cikisok Asikur Rohman Sofi</h3>
-          <p>আজকের ভিজিট: 8</p>
+          <p>আজকের ভিজিট: 25</p>
+        </article>
+        <article className="info-card">
+          <h3>Polli Cikisok Asikur Rohman Sofi</h3>
+          <p>আজকের ভিজিট: 25</p>
         </article>
         <article className="info-card">
           <h3>Polli Cikisok Mojibur Rohman</h3>
