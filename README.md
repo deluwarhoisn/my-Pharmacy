@@ -1,16 +1,77 @@
-# React + Vite
+# Sotota Pharmacy
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Sotota Pharmacy is a React + Vite web app for pharmacy and livestock care services. It provides a Bengali-first experience for families, farms, medicine guidance, breeding support, and doctor requests.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- Home page with service overview and team introduction
+- Medicine corner for general medicine, supplements, and first aid
+- Livestock services and advice pages
+- Artificial breeding information
+- Doctor request flow
+- Dashboard page for internal views
+- Mobile-friendly navigation with route-based pages
 
-## React Compiler
+## Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- React 19
+- React Router DOM
+- Vite
+- Tailwind CSS
+- DaisyUI
 
-## Expanding the ESLint configuration
+## Getting Started
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Install dependencies
+
+```bash
+npm install
+```
+
+### Run the development server
+
+```bash
+npm run dev
+```
+
+### Build for production
+
+```bash
+npm run build
+```
+
+### Preview the production build
+
+```bash
+npm run preview
+```
+
+## Scripts
+
+- `npm run dev` - start the Vite dev server
+- `npm run build` - create a production build
+- `npm run preview` - preview the production build locally
+- `npm run lint` - run ESLint
+- `npm run type-check` - run TypeScript type checking
+
+## Routes
+
+- `/` - Home
+- `/medicine` - Medicine corner
+- `/livestock` - Livestock services
+- `/livestock-advice` - Livestock advice
+- `/breeding` - Breeding information
+- `/doctor-request` - Doctor request page
+- `/dashboard` - Dashboard
+
+## Project Structure
+
+- `src/App.jsx` - main app shell and navigation
+- `src/main.jsx` - app bootstrap
+- `src/pages/` - route pages and supporting UI
+- `src/App.css` - app-level styles
+- `src/index.css` - global styles
+
+## Notes
+
+The app currently uses React Router for navigation and keeps the UI content centered around Sotota Pharmacy branding and services.
