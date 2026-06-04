@@ -1,63 +1,50 @@
 function Footer() {
   return (
-    <footer className="bg-neutral text-neutral-content px-6 py-12">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10">
-
-        {/* Brand */}
-        <div>
-          <h2 className="text-2xl font-bold mb-3">MyCompany</h2>
-          <p className="text-sm opacity-80">
-            We build modern web solutions with React, Node.js and clean UI design.
+    <footer className="site-footer">
+      <div className="site-footer-grid">
+        <section className="footer-brand-block">
+          <h2>Sotota Pharmacy</h2>
+          <p>
+            Family care, livestock support, and doctor request services in one responsive platform.
           </p>
 
-          {/* Social */}
-          <div className="flex gap-4 mt-4">
-            <a className="hover:text-primary transition">🌐</a>
-            <a className="hover:text-primary transition">🐦</a>
-            <a className="hover:text-primary transition">📘</a>
-            <a className="hover:text-primary transition">📸</a>
+          <div className="footer-social" aria-label="Social links">
+            <a href="https://example.com" aria-label="Website">🌐</a>
+            <a href="https://example.com" aria-label="Twitter">🐦</a>
+            <a href="https://example.com" aria-label="Facebook">📘</a>
+            <a href="https://example.com" aria-label="Instagram">📸</a>
           </div>
-        </div>
+        </section>
 
-        {/* Services */}
-        <nav>
-          <h6 className="footer-title mb-3">Services</h6>
-          <div className="flex flex-col gap-2">
-            <a className="link link-hover">Branding</a>
-            <a className="link link-hover">Design</a>
-            <a className="link link-hover">Marketing</a>
-            <a className="link link-hover">Advertisement</a>
-          </div>
+        <nav className="footer-column" aria-label="Services links">
+          <h6>Services</h6>
+          <a href="#home">Home</a>
+          <a href="/medicine">Medicine corner</a>
+          <a href="/livestock">Livestock care</a>
+          <a href="/doctor-request">Doctor request</a>
         </nav>
 
-        {/* Company */}
-        <nav>
-          <h6 className="footer-title mb-3">Company</h6>
-          <div className="flex flex-col gap-2">
-            <a className="link link-hover">About us</a>
-            <a className="link link-hover">Contact</a>
-            <a className="link link-hover">Jobs</a>
-            <a className="link link-hover">Press kit</a>
-          </div>
+        <nav className="footer-column" aria-label="Company links">
+          <h6>Company</h6>
+          <a href="#polli-cikisok">Team</a>
+          <a href="/dashboard">Dashboard</a>
+          <a href="/breeding">Breeding</a>
+          <a href="/livestock-advice">Advice</a>
         </nav>
 
-        {/* Legal */}
-        <nav>
-          <h6 className="footer-title mb-3">Legal</h6>
-          <div className="flex flex-col gap-2">
-            <a className="link link-hover">Terms of use</a>
-            <a className="link link-hover">Privacy policy</a>
-            <a className="link link-hover">Cookie policy</a>
-          </div>
+        <nav className="footer-column" aria-label="Legal links">
+          <h6>Contact</h6>
+          <a href="tel:01724608599">01724608599</a>
+          <a href="tel:01923775964">01923775964</a>
+          <a href="mailto:info@sototapharmacy.com">info@sototapharmacy.com</a>
         </nav>
       </div>
 
-      {/* Bottom line */}
-      <div className="text-center mt-10 text-sm opacity-60">
-        © {new Date().getFullYear()} MyCompany. All rights reserved.
+      <div className="site-footer-bottom">
+        © {new Date().getFullYear()} Sotota Pharmacy. All rights reserved.
       </div>
     </footer>
-  );
+  )
 }
 
 export default Footer;
