@@ -1,10 +1,15 @@
 import Footer from './Footer'
+import { ROLE_LABELS } from '../roleAccess'
+import { useRole } from '../roleContext'
 
 function HomePage() {
+  const { role } = useRole()
+
   return (
     <>
       <main className="hero-placeholder" id="home">
         <h1>পরিবার, খামার ও পোষা প্রাণীর জন্য একসাথে বিশ্বস্ত সেবা</h1>
+        <p>বর্তমান role: {ROLE_LABELS[role]}</p>
       </main>
 
       <section className="polli-page" id="polli-cikisok" aria-label="Polli Cikisok team">

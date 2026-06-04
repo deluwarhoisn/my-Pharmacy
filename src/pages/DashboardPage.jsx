@@ -1,8 +1,17 @@
+import { ROLE_LABELS } from '../roleAccess'
+import { useRole } from '../roleContext'
+
 function DashboardPage() {
+  const { role } = useRole()
+
   return (
     <section className="content-page">
       <h1>ড্যাশবোর্ড</h1>
       <p>Sotota Pharmacy সেবার সারসংক্ষেপ</p>
+      <div className="role-banner inline">
+        <span className="role-badge">{ROLE_LABELS[role]}</span>
+        <span>Dashboard access granted</span>
+      </div>
 
       <div className="stats-grid">
         <article className="stat-card">
@@ -25,16 +34,12 @@ function DashboardPage() {
 
       <div className="info-grid">
         <article className="info-card">
-          <h3>Polli Cikisok Asikur Rohman Sofi</h3>
-          <p>আজকের ভিজিট: 25</p>
+          <h3>Admin Queue</h3>
+          <p>Pending approvals, role management, and branch oversight</p>
         </article>
         <article className="info-card">
-          <h3>Polli Cikisok Asikur Rohman Sofi</h3>
-          <p>আজকের Ai ভিজিট: 12</p>
-        </article>
-        <article className="info-card">
-          <h3>Polli Cikisok Mojibur Rohman</h3>
-          <p>আজকের ভিজিট: 15</p>
+          <h3>Doctor Queue</h3>
+          <p>Active cases, visit assignments, and follow-ups</p>
         </article>
       </div>
     </section>
