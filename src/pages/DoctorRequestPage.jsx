@@ -1,6 +1,27 @@
 import { ROLE_LABELS, ROLES } from '../roleAccess'
 import { useRole } from '../roleContext'
 
+const DOCTORS = [
+  {
+    name: 'Dr. Amina Rahman',
+    specialty: 'General medicine',
+    availability: 'Sat - Thu, 9:00 AM - 2:00 PM',
+    phone: '01711-000111',
+  },
+  {
+    name: 'Dr. Karim Hossain',
+    specialty: 'Livestock care',
+    availability: 'Sat - Thu, 3:00 PM - 8:00 PM',
+    phone: '01711-000222',
+  },
+  {
+    name: 'Dr. Nusrat Jahan',
+    specialty: 'Emergency visit',
+    availability: 'Daily, 24/7 on-call',
+    phone: '01711-000333',
+  },
+]
+
 function DoctorRequestPage() {
   const { role } = useRole()
   const isInternalRole = role === ROLES.DOCTOR || role === ROLES.ADMIN
@@ -30,6 +51,17 @@ function DoctorRequestPage() {
           </article>
         </div>
       ) : null}
+
+      <div className="info-grid" aria-label="Doctor list">
+        {DOCTORS.map((doctor) => (
+          <article key={doctor.name} className="info-card">
+            <h3>{doctor.name}</h3>
+            <p>{doctor.specialty}</p>
+            <p>{doctor.availability}</p>
+            <p>{doctor.phone}</p>
+          </article>
+        ))}
+      </div>
 
       <form className="request-form" onSubmit={(event) => event.preventDefault()}>
         <label>
