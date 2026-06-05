@@ -1,8 +1,20 @@
+import { NavLink } from 'react-router-dom'
+
 function MedicinePage() {
   return (
     <section className="content-page">
       <h1>মেডিসিন কর্নার</h1>
       <p>মানুষের সাধারণ ঔষধ, সাপ্লিমেন্ট ও ফার্স্ট এইড সাপোর্ট।</p>
+
+      <div className="checkout-cta">
+        <div>
+          <strong>প্রেসক্রিপশন থাকলে সরাসরি checkout করুন</strong>
+          <p>ডাক্তারি প্রেসক্রিপশন আপলোড করে অর্ডার এগিয়ে নিন।</p>
+        </div>
+        <NavLink to="/checkout" className="checkout-link">
+          Checkout with prescription upload
+        </NavLink>
+      </div>
 
       <div className="info-grid">
         <article className="info-card">

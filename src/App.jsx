@@ -4,6 +4,7 @@ import { useState } from 'react'
 import { NavLink, Navigate, Route, Routes } from 'react-router-dom'
 import HomePage from './pages/HomePage'
 import MedicinePage from './pages/MedicinePage'
+import CheckoutPage from './pages/CheckoutPage'
 import LivestockPage from './pages/LivestockPage'
 import LivestockAdvicePage from './pages/LivestockAdvicePage'
 import BreedingPage from './pages/BreedingPage'
@@ -136,6 +137,7 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/medicine" element={<MedicinePage />} />
+          <Route path="/checkout" element={<CheckoutPage />} />
           <Route path="/livestock" element={<LivestockPage />} />
           <Route path="/livestock-advice" element={<LivestockAdvicePage />} />
           <Route path="/breeding" element={<BreedingPage />} />
