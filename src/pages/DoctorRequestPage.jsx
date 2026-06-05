@@ -25,6 +25,17 @@ const DOCTORS = [
 function DoctorRequestPage() {
   const { role } = useRole()
   const isInternalRole = role === ROLES.DOCTOR || role === ROLES.ADMIN
+  const replyAlert = isInternalRole
+    ? {
+        title: 'New patient reply alert',
+        message: 'A patient request has been updated and is waiting for doctor response.',
+        status: 'Priority response needed',
+      }
+    : {
+        title: 'Doctor reply alert',
+        message: 'Your doctor has replied to the latest request. Check the message and next steps below.',
+        status: 'Last reply: 10 minutes ago',
+      }
 
   return (
     <section className="content-page">
@@ -33,6 +44,14 @@ function DoctorRequestPage() {
       <div className="role-banner inline">
         <span className="role-badge">{ROLE_LABELS[role]}</span>
         <span>{isInternalRole ? 'Internal follow-up tools enabled' : 'Customer request form enabled'}</span>
+      </div>
+
+      <div className="reply-alert" role="status" aria-live="polite">
+        <div>
+          <strong>{replyAlert.title}</strong>
+          <p>{replyAlert.message}</p>
+        </div>
+        <span>{replyAlert.status}</span>
       </div>
 
       {isInternalRole ? (

@@ -3,6 +3,7 @@ import { useRole } from '../roleContext'
 
 function DashboardPage() {
   const { role } = useRole()
+  const isInternalRole = role === 'doctor' || role === 'admin'
 
   return (
     <section className="content-page">
@@ -12,6 +13,16 @@ function DashboardPage() {
         <span className="role-badge">{ROLE_LABELS[role]}</span>
         <span>Dashboard access granted</span>
       </div>
+
+      {isInternalRole ? (
+        <div className="reply-alert reply-alert--internal" role="status" aria-live="polite">
+          <div>
+            <strong>Doctor reply inbox</strong>
+            <p>2 new patient follow-ups are waiting for a reply from the clinical team.</p>
+          </div>
+          <span>Unread replies: 2</span>
+        </div>
+      ) : null}
 
       <div className="stats-grid">
         <article className="stat-card">
