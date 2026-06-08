@@ -35,7 +35,7 @@ function Footer() {
         <nav className="footer-column" aria-label="Legal links">
           <h6>Contact</h6>
           <a href="tel:01724608599">01724608599</a>
-          <a href="tel:01923775964">019237759614</a>
+          <a href="tel:01923775964">01923775964</a>
           <a href="mailto:info@sototapharmacy.com">info@sototapharmacy.com</a>
         </nav>
       </div>
