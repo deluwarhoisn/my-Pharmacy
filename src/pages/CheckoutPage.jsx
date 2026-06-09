@@ -62,7 +62,7 @@ function CheckoutPage() {
           </div>
           <div className="summary-row">
             <span>Delivery</span>
-            <strong>৳ 600</strong>
+            <strong>৳ 700</strong>
           </div>
           <div className="summary-row total">
             <span>Total</span>
