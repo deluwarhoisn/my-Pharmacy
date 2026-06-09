@@ -62,11 +62,11 @@ function CheckoutPage() {
           </div>
           <div className="summary-row">
             <span>Delivery</span>
-            <strong>৳ 700</strong>
+            <strong>৳ 1200</strong>
           </div>
           <div className="summary-row total">
             <span>Total</span>
-            <strong>৳ 1020</strong>
+            <strong>৳ 1620</strong>
           </div>
           <p>
             প্রেসক্রিপশন যাচাই শেষে অর্ডার কনফার্ম করা হবে। জরুরি হলে হেল্পলাইনে কল করুন।
