@@ -31,7 +31,7 @@ function DashboardPage() {
         </article>
         <article className="stat-card">
           <h3>হোম ভিজিট রিকোয়েস্ট.</h3>
-          <strong>17</strong>
+          <strong>37</strong>
         </article>
         <article className="stat-card">
           <h3>প্রাণিসম্পদ কেস</h3>
