@@ -27,15 +27,15 @@ function DashboardPage() {
       <div className="stats-grid">
         <article className="stat-card">
           <h3>আজকের কল.</h3>
-          <strong>424</strong>
+          <strong>42</strong>
         </article>
         <article className="stat-card">
-          <h3>হোম ভিজিট রিকোয়েস্ট.</h3>
-          <strong>372</strong>
+          <h3>হোম ভিজিট রিকোয়েস্ট.</h3>
+          <strong>32</strong>
         </article>
         <article className="stat-card">
           <h3>প্রাণিসম্পদ কেস</h3>
-          <strong>262</strong>
+          <strong>26</strong>
         </article>
         <article className="stat-card">
           <h3>মেডিসিন অর্ডার</h3>
