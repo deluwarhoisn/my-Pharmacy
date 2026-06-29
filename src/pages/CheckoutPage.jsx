@@ -58,7 +58,7 @@ function CheckoutPage() {
           <h2>Order summary</h2>
           <div className="summary-row">
             <span>Prescription medicines</span>
-            <strong>৳ 3334</strong>
+            <strong>৳ 33</strong>
           </div>
           <div className="summary-row">
             <span>Delivery</span>
