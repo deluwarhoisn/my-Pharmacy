@@ -58,7 +58,7 @@ function CheckoutPage() {
           <h2>Order summary</h2>
           <div className="summary-row">
             <span>Prescription medicines</span>
-            <strong>৳ 33</strong>
+            <strong>৳ 333</strong>
           </div>
           <div className="summary-row">
             <span>Delivery</span>
@@ -69,7 +69,7 @@ function CheckoutPage() {
             <strong>৳ 20000</strong>
           </div>
           <p>
-            প্রেসক্রিপশন যাচাই শেষে অর্ডার কনফার্ম করা হবে। জরুরি হলে হেল্পলাইনে কল করুন।
+            প্রেসক্রিপশন যাচাই শেষে অর্ডার কনফার্ম কর হবে। জরুরি হলে হেল্পলাইনে কল করুন।
           </p>
         </aside>
       </div>
